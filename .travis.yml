@@ -1,8 +1,12 @@
 language: ruby
 rvm:
 - 2.3.1
+before_install:
+	- npm install
+install: gem install jekyll html-proofer
 script:
-- bundle exec jekyll build
+# - bundle exec jekyll build
+npm run travis
 after_success:
 - git clone https://$GITHUB_REPO
 - cd $(basename ${GITHUB_REPO%.git})
