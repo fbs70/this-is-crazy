@@ -2,7 +2,7 @@ language: ruby
 rvm:
 - 2.3.1
 before_install:
-	- npm install
+- npm install
 install: gem install jekyll html-proofer
 script: npm run travis
 # - bundle exec jekyll build
