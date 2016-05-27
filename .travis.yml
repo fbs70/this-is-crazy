@@ -1,6 +1,16 @@
+env:
+  global:
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+  - GITHUB_REPO: github.com/fbs70/this-is-crazy.git
+  - REPO_TARGET_BRANCH: gh-pages
+  - secure: CusaizAl4XPliZrPIWi50t8jf2O9wdvx5snZcfEMc8llJ7knUSUMFdQUx+l8B5Cdcjh3Zt6PQwsRpxLY6YAm5vUtqfv6h5nUxDf0yLWOBm1gUy2/Vq3QiJF4ifDY318S+WNnWcITtaEu8oM3SODxdLPsp1N4ck2AloAm97Arkran8BEPLvpgiUG+fs5pCUue5KXVyQ6J+veXWcY3Cfq2nbseZAnNwIzy+QvvFDyvNxnudPqLDBe0/xacFfkFffTRx5Tun9D4xYX/fB/j+nmy/iP/cLDbllFhOfnnV42oPDvjOoYmXmmwLu3M5WUjUoEmauzTt/CVR78WwXk62EBb4OTptk+K7yHV9ULiDCLD+an3HoOjCf2ddHVad+BuC36w9nF7Qp5KwdkOkuOL1PdogaR2G4lu29OQO7WdMVu53lFDK2WvnSHQl78vfv3GsRlaawP9bLeDPrND3gaJd4GjWWo459bmyEipM1nisF2h+5efZVQjkpsi2sSq9ZUQgF/jigcsqUD7Zhf6pja9fsOtTKIGOhv+GNdwBUMjZi30XUhIVVcp1uA63GDlIrJOC60MAYUnOeJB8htu1JGtQC6W7PneovNmbNRQrr+11MIAl1sSX2Nz4/T5ZngA/eIHjG62En1jbWJcJvWSUvaTEDdrbvYSA2SH+X8ffRMuwnhyV+A=
+  - secure: bDhoyuvBwPTsVl2cswkRRbr7F8PD1qVwkQ4bNCSQT/UF3ccVigYDFLckJ2X1v3Y2JMceRBVq5M46DtdI88hNWm107JR8OPrfxytxusv3czcPaDX9w1cvDvJP8ecaruK/jNX2Yu57BCDEjzeNFHtqUWj6ycAzVmmVoDexLA+hWbRVtjiB3ONG+v2ho/Zsg+L0yMaBXwv8Dvxht4QOJzV+9GaDuXom3vxU9+4i7EZLkr3MDUzLN/pkHJdVJB6Abgj9940a3q1JkS1vwJpC6ljbEbUwun5izQpmKoSHpOSn4XXESSQ7IhzwN+UX6YxEBtihXAeWwEPK2qesVKlMHkXxucyySdfwglxwdaSXZ1mhiy0RcDNx1E/SegVYO4fUDLIt7q20sfl55Y8TNtmjA10XN+grw7IY28NC34K23/ZGMwtB80ajWYQ1YBQfjDyKX/1oeNwmC6eNfCAmiBBWrp85UHkb+0Ea+i7hihF4bHe10KNTOfav21VVE97uaN94fzSznAUUIkj3uHyTxF8a6wmfeI5O2DZKnhrpHZ4119oBQ+OMRryIHwv+TGGS43oVIaTJcXi7i4pvUjMnxnKFQNz3iwY6nC2V4HxQVWiVtFjHCv+01Qkvfxv9W+xAeCgJhiiz0RmQxbVsLdZ0Qt1nfXWLmBS9Fc2rgcmp9YyX/CNGWBg=
+
+
 language: ruby
 rvm:
 - 2.3.1
+
 before_install:
 - npm install
 install: gem install jekyll html-proofer
@@ -16,11 +26,4 @@ after_success:
 - touch .nojekyll
 - git add -A .
 - git commit -m "Generated Jekyll site by Travis CI - ${TRAVIS_BUILD_NUMBER}"
-- git push --force "https://${DEPLOY_KEY}@${GITHUB_REPO}" HEAD:${REPO_TARGET_BRANCH}
-env:
-  global:
-  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
-  - GITHUB_REPO: github.com/fbs70/this-is-crazy.git
-  - REPO_TARGET_BRANCH: gh-pages
-  - secure: CusaizAl4XPliZrPIWi50t8jf2O9wdvx5snZcfEMc8llJ7knUSUMFdQUx+l8B5Cdcjh3Zt6PQwsRpxLY6YAm5vUtqfv6h5nUxDf0yLWOBm1gUy2/Vq3QiJF4ifDY318S+WNnWcITtaEu8oM3SODxdLPsp1N4ck2AloAm97Arkran8BEPLvpgiUG+fs5pCUue5KXVyQ6J+veXWcY3Cfq2nbseZAnNwIzy+QvvFDyvNxnudPqLDBe0/xacFfkFffTRx5Tun9D4xYX/fB/j+nmy/iP/cLDbllFhOfnnV42oPDvjOoYmXmmwLu3M5WUjUoEmauzTt/CVR78WwXk62EBb4OTptk+K7yHV9ULiDCLD+an3HoOjCf2ddHVad+BuC36w9nF7Qp5KwdkOkuOL1PdogaR2G4lu29OQO7WdMVu53lFDK2WvnSHQl78vfv3GsRlaawP9bLeDPrND3gaJd4GjWWo459bmyEipM1nisF2h+5efZVQjkpsi2sSq9ZUQgF/jigcsqUD7Zhf6pja9fsOtTKIGOhv+GNdwBUMjZi30XUhIVVcp1uA63GDlIrJOC60MAYUnOeJB8htu1JGtQC6W7PneovNmbNRQrr+11MIAl1sSX2Nz4/T5ZngA/eIHjG62En1jbWJcJvWSUvaTEDdrbvYSA2SH+X8ffRMuwnhyV+A=
-  - secure: bDhoyuvBwPTsVl2cswkRRbr7F8PD1qVwkQ4bNCSQT/UF3ccVigYDFLckJ2X1v3Y2JMceRBVq5M46DtdI88hNWm107JR8OPrfxytxusv3czcPaDX9w1cvDvJP8ecaruK/jNX2Yu57BCDEjzeNFHtqUWj6ycAzVmmVoDexLA+hWbRVtjiB3ONG+v2ho/Zsg+L0yMaBXwv8Dvxht4QOJzV+9GaDuXom3vxU9+4i7EZLkr3MDUzLN/pkHJdVJB6Abgj9940a3q1JkS1vwJpC6ljbEbUwun5izQpmKoSHpOSn4XXESSQ7IhzwN+UX6YxEBtihXAeWwEPK2qesVKlMHkXxucyySdfwglxwdaSXZ1mhiy0RcDNx1E/SegVYO4fUDLIt7q20sfl55Y8TNtmjA10XN+grw7IY28NC34K23/ZGMwtB80ajWYQ1YBQfjDyKX/1oeNwmC6eNfCAmiBBWrp85UHkb+0Ea+i7hihF4bHe10KNTOfav21VVE97uaN94fzSznAUUIkj3uHyTxF8a6wmfeI5O2DZKnhrpHZ4119oBQ+OMRryIHwv+TGGS43oVIaTJcXi7i4pvUjMnxnKFQNz3iwY6nC2V4HxQVWiVtFjHCv+01Qkvfxv9W+xAeCgJhiiz0RmQxbVsLdZ0Qt1nfXWLmBS9Fc2rgcmp9YyX/CNGWBg=
+- git push -f "https://${DEPLOY_KEY}@${GITHUB_REPO}" ${REPO_TARGET_BRANCH} > /dev/null 2>&1
