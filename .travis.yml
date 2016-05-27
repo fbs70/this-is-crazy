@@ -4,9 +4,9 @@ rvm:
 before_install:
 	- npm install
 install: gem install jekyll html-proofer
-script:
+script: npm run travis
 # - bundle exec jekyll build
-npm run travis
+
 after_success:
 - git clone https://$GITHUB_REPO
 - cd $(basename ${GITHUB_REPO%.git})
