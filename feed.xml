@@ -6,8 +6,8 @@
 </description>
     <link>/this-is-crazy/</link>
     <atom:link href="/this-is-crazy/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 27 May 2016 13:25:52 -0500</pubDate>
-    <lastBuildDate>Fri, 27 May 2016 13:25:52 -0500</lastBuildDate>
+    <pubDate>Fri, 27 May 2016 14:04:24 -0500</pubDate>
+    <lastBuildDate>Fri, 27 May 2016 14:04:24 -0500</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
       <item>
@@ -35,6 +35,18 @@
         <category>jekyll</category>
         
         <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>Getting Started</title>
+        <description>&lt;h1 id=&quot;getting-started&quot;&gt;Getting Started&lt;/h1&gt;
+&lt;p&gt;This is the getting started page.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 26 May 2016 12:29:51 -0500</pubDate>
+        <link>/this-is-crazy/2016/05/26/getting-started.html</link>
+        <guid isPermaLink="true">/this-is-crazy/2016/05/26/getting-started.html</guid>
+        
         
       </item>
     
