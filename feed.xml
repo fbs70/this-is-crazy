@@ -6,9 +6,21 @@
 </description>
     <link>/this-is-crazy/</link>
     <atom:link href="/this-is-crazy/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 27 May 2016 14:04:24 -0500</pubDate>
-    <lastBuildDate>Fri, 27 May 2016 14:04:24 -0500</lastBuildDate>
+    <pubDate>Fri, 27 May 2016 15:29:29 -0500</pubDate>
+    <lastBuildDate>Fri, 27 May 2016 15:29:29 -0500</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>Does this CI Work</title>
+        <description>&lt;h1 id=&quot;does-this-ci-work&quot;&gt;Does this CI Work&lt;/h1&gt;
+&lt;p&gt;Testing to see if travis CI moves this to gh-pages&lt;/p&gt;
+</description>
+        <pubDate>Fri, 27 May 2016 14:15:00 -0500</pubDate>
+        <link>/this-is-crazy/2016/05/27/does-this-work.html</link>
+        <guid isPermaLink="true">/this-is-crazy/2016/05/27/does-this-work.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Welcome to Jekyll!</title>
